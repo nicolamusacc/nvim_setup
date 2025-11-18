@@ -11,11 +11,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
  
-require("lazy").setup({
+require("lazy").setup({ { import = "nmusacchio.lazy" }, { import = "nmusacchio.lazy.lsp" } }, {
   checker = {
     enabled = true,
     notify = false,
   },
-  spec = "nmusacchio.lazy",
   change_detection = { notify = false }
 })
