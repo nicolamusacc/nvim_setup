@@ -46,3 +46,8 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.tabstop = 2
   end,
 })
+
+-- line number
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes"
